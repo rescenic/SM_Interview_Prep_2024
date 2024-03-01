@@ -9,6 +9,10 @@ using namespace std;
 class Solution
 {
 public:
+  Solution() = default;
+  ~Solution() = default;
+  Solution(const Solution&) = delete;
+
   string intToRoman(int num)
   {
     const vector<int> nums{ 1000, 900, 500, 400, 100, 90,

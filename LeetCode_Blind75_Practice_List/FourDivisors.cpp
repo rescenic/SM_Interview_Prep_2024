@@ -8,6 +8,10 @@ using namespace std;
 class Solution1
 {
 public:
+  Solution1() = default;
+  ~Solution1() = default;
+  Solution1(const Solution1&) = delete;
+
   int sumFourDivisors(vector<int>& nums)
   {
     int result = 0;
@@ -44,6 +48,10 @@ public:
 class Solution2
 {
 public:
+  Solution2() = default;
+  ~Solution2() = default;
+  Solution2(const Solution2&) = delete;
+
   int sumFourDivisors(vector<int>& nums)
   {
     int result = 0;

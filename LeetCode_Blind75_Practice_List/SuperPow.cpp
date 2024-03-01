@@ -7,6 +7,10 @@ using namespace std;
 class Solution
 {
 public:
+  Solution() = default;
+  ~Solution() = default;
+  Solution(const Solution&) = delete;
+
   int superPow(int a, vector<int>& b)
   {
     int result = 1;

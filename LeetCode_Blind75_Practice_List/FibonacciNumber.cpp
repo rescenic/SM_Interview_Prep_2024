@@ -12,6 +12,10 @@ using namespace std;
 class Solution1
 {
 public:
+  Solution1() = default;
+  ~Solution1() = default;
+  Solution1(const Solution1&) = delete;
+
   int fib(int N)
   {
     double phi = round_d((1 + pow(5, 0.5)) / 2, 6);
@@ -40,6 +44,10 @@ private:
 class Solution2
 {
 public:
+  Solution2() = default;
+  ~Solution2() = default;
+  Solution2(const Solution2&) = delete;
+
   int fib(int N)
   {
     vector<vector<int>> T = { {1, 1},
@@ -92,6 +100,10 @@ private:
 class Solution3
 {
 public:
+  Solution3() = default;
+  ~Solution3() = default;
+  Solution3(const Solution3&) = delete;
+
   int fib(int N)
   {
     vector<int> dp(3, 0);
@@ -107,13 +119,13 @@ public:
 
 int main()
 {
-  Solution1 sol1 = new Solution1();
+  Solution1 sol1;
   cout << sol1.fib(8) << endl;
 
-  Solution2 sol2 = new Solution2();
+  Solution2 sol2;
   cout << sol2.fib(8) << endl;
 
-  Solution2 sol3 = new Solution3();
+  Solution2 sol3;
   cout << sol3.fib(8) << endl;
   return 0;
 }

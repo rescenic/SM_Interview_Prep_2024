@@ -5,9 +5,13 @@
 
 using namespace std;
 
-class Solution
+class Solution1
 {
 public:
+  Solution1() = default;
+  ~Solution1() = default;
+  Solution1(const Solution1&) = delete;
+
   int countPrimes(int n)
   {
     return size(linear_sieve_of_eratosthenes(n - 1));
@@ -43,6 +47,10 @@ private:
 class Solution2
 {
 public:
+  Solution2() = default;
+  ~Solution2() = default;
+  Solution2(const Solution2&) = delete;
+
   int countPrimes(int n)
   {
     if (n <= 2)
@@ -74,8 +82,11 @@ public:
 
 int main()
 {
-  Solution sol = new Solution();
-  cout << sol.countPrimes(8) << endl;
+  Solution1 sol1;
+  cout << sol1.countPrimes(8) << endl;
+
+  Solution2 sol2;
+  cout << sol2.countPrimes(8) << endl;
 
   return 0;
 }

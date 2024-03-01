@@ -8,9 +8,13 @@
 
 using namespace std;
 
-class Solution
+class Solution1
 {
 public:
+  Solution1() = default;
+  ~Solution1() = default;
+  Solution1(const Solution1&) = delete;
+
   int romanToInt(string s)
   {
     unordered_map<char, int> numeral_map = { {'I', 1}, {'V', 5}, {'X', 10}, {'L', 50}, {'C', 100}, {'D', 500}, {'M', 1000} };
@@ -35,6 +39,10 @@ public:
 class Solution2
 {
 public:
+  Solution2() = default;
+  ~Solution2() = default;
+  Solution2(const Solution2&) = delete;
+
   int romanToInt(string s)
   {
     unordered_map<char, int> numeral_map = { {'I', 1}, {'V', 5}, {'X', 10}, {'L', 50}, {'C', 100}, {'D', 500}, {'M', 1000} };
