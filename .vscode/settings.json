@@ -1,3 +1,10 @@
 {
-  "java.compile.nullAnalysis.mode": "automatic"
+  "files.associations": {
+    ".sequelizerc": "javascript",
+    ".stylelintrc": "json",
+    ".prettierrc": "json",
+    "*.haml": "haml",
+    "*.erb": "erb",
+    "vector": "cpp"
+  }
 }
