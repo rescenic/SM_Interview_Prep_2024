@@ -1,0 +1,6 @@
+std
+*.o
+*.exe
+a.out
+*.ii
+*.s
