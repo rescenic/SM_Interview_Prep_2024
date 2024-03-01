@@ -1,6 +1,7 @@
 // Time:  O(n)
 // Space: O(n)
 #include <vector>
+#include <iostream>
 
 using namespace std;
 
@@ -24,7 +25,7 @@ private:
         spf[i] = i;
         primes.emplace_back(i);
       }
-      for (const auto &p : primes)
+      for (const auto& p : primes)
       {
         if (i * p > n || p > spf[i])
         {
@@ -70,3 +71,11 @@ public:
     return cnt;
   }
 };
+
+int main()
+{
+  Solution sol = new Solution();
+  cout << sol.countPrimes(8) << endl;
+
+  return 0;
+}

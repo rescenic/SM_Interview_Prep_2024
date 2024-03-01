@@ -7,10 +7,10 @@ using namespace std;
 class Solution
 {
 public:
-  int superPow(int a, vector<int> &b)
+  int superPow(int a, vector<int>& b)
   {
     int result = 1;
-    for (const auto &digit : b)
+    for (const auto& digit : b)
     {
       result = myPow(result, 10, 1337) * myPow(a, digit, 1337) % 1337;
     }
@@ -34,3 +34,8 @@ private:
     return result % b;
   }
 };
+
+int main()
+{
+  return 0;
+}

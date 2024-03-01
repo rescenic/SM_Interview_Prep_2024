@@ -5,13 +5,13 @@
 
 using namespace std;
 
-class Solution
+class Solution1
 {
 public:
-  int sumFourDivisors(vector<int> &nums)
+  int sumFourDivisors(vector<int>& nums)
   {
     int result = 0;
-    for (const auto &num : nums)
+    for (const auto& num : nums)
     {
       vector<int> facs;
       for (int i = 1; i * i <= num; ++i)
@@ -44,22 +44,22 @@ public:
 class Solution2
 {
 public:
-  int sumFourDivisors(vector<int> &nums)
+  int sumFourDivisors(vector<int>& nums)
   {
     int result = 0;
-    for (const auto &num : nums)
+    for (const auto& num : nums)
     {
-      const auto &facs = factorize(num);
+      const auto& facs = factorize(num);
       if (facs.size() == 1 && facs[0].second == 3)
       {
-        const auto &p = facs[0].first;
+        const auto& p = facs[0].first;
         result += int(pow(p, 4) - 1) / (p - 1); // p^0 + p^1 +p^2 +p^3
       }
       else if (facs.size() == 2 &&
                facs[0].second == 1 &&
                facs[1].second == 1)
       {
-        const auto &[p, q] = pair(facs[0].first, facs[1].first);
+        const auto& [p, q] = pair(facs[0].first, facs[1].first);
         result += (1 + p) * (1 + q);
       }
     }
@@ -89,3 +89,8 @@ private:
     return result;
   }
 };
+
+int main()
+{
+  return 0;
+}

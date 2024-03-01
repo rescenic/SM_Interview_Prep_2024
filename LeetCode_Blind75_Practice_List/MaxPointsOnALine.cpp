@@ -19,18 +19,18 @@ using namespace std;
 class Solution
 {
 public:
-  int maxPoints(vector<Point> &points)
+  int maxPoints(vector<Point>& points)
   {
     int max_points = 0;
     for (int i = 0; i < points.size(); ++i)
     {
       unordered_map<double, int> slope_count;
-      const auto &start = points[i];
+      const auto& start = points[i];
       int same = 1;
 
       for (int j = i + 1; j < points.size(); ++j)
       {
-        const auto &end = points[j];
+        const auto& end = points[j];
         if (start.x == end.x && start.y == end.y)
         {
           ++same;
@@ -47,7 +47,7 @@ public:
       }
 
       int current_max = same;
-      for (const auto &kvp : slope_count)
+      for (const auto& kvp : slope_count)
       {
         current_max = max(current_max, kvp.second + same);
       }
@@ -57,3 +57,8 @@ public:
     return max_points;
   }
 };
+
+int main()
+{
+  return 0;
+}

@@ -42,13 +42,13 @@ class Solution2
 public:
   int fib(int N)
   {
-    vector<vector<int>> T = {{1, 1},
-                             {1, 0}};
-    return matrixMult({{1, 0}}, matrixExpo(T, N))[0][1]; // [a1, a0] * T^N
+    vector<vector<int>> T = { {1, 1},
+                             {1, 0} };
+    return matrixMult({ {1, 0} }, matrixExpo(T, N))[0][1]; // [a1, a0] * T^N
   }
 
 private:
-  vector<vector<int>> matrixExpo(const vector<vector<int>> &A, int pow)
+  vector<vector<int>> matrixExpo(const vector<vector<int>>& A, int pow)
   {
     vector<vector<int>> result(A.size(), vector<int>(A.size()));
     vector<vector<int>> A_exp(A);
@@ -68,7 +68,7 @@ private:
     return result;
   }
 
-  vector<vector<int>> matrixMult(const vector<vector<int>> &A, const vector<vector<int>> &B)
+  vector<vector<int>> matrixMult(const vector<vector<int>>& A, const vector<vector<int>>& B)
   {
     vector<vector<int>> result(A.size(), vector<int>(B[0].size()));
     for (int i = 0; i < A.size(); ++i)
@@ -104,3 +104,16 @@ public:
     return dp[N % 3];
   }
 };
+
+int main()
+{
+  Solution1 sol1 = new Solution1();
+  cout << sol1.fib(8) << endl;
+
+  Solution2 sol2 = new Solution2();
+  cout << sol2.fib(8) << endl;
+
+  Solution2 sol3 = new Solution3();
+  cout << sol3.fib(8) << endl;
+  return 0;
+}
