@@ -1,10 +1,10 @@
 [book]
-authors = ["Xuhua Huang"]
-description = "Embedded programming journey with C++."
+authors = ["Shaikat Majumdar"]
+description = "Ultra Low Latency journey with C++."
 language = "en"
 multilingual = false
 src = "."
-title = "Embedded Programming"
+title = "Ultra Low Latency"
 
 [output.html]
 default-theme = "light"
